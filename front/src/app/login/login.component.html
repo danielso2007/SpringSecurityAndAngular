@@ -1,0 +1,16 @@
+<div class="alert alert-danger" [hidden]="!error">
+	There was a problem logging in. Please try again.
+</div>
+<form class="row g-3" (submit)="login()">
+	<div class="col-md-6">
+	  <label for="inputEmail4" class="form-label">Username</label>
+	  <input type="text" name="username" class="form-control" id="inputEmail4" [(ngModel)]="credentials.username">
+	</div>
+	<div class="col-md-6">
+	  <label for="inputPassword4" class="form-label">Password</label>
+	  <input type="password" name="password" class="form-control" id="inputPassword4" [(ngModel)]="credentials.password">
+	</div>
+	<div class="col-12">
+	  <button type="submit" class="btn btn-primary">Sign in</button>
+	</div>
+  </form>
